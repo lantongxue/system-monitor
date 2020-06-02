@@ -1,0 +1,18 @@
+﻿<Application x:Class="WpfApp1.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WpfApp1"
+             xmlns:tb="http://www.hardcodet.net/taskbar"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ContextMenu x:Shared="false" x:Key="SysTrayMenu">
+            <MenuItem Header="退出" Click="MenuItem_Click"/>
+        </ContextMenu>
+        <tb:TaskbarIcon x:Key="Taskbar" 
+                        IconSource="pack://application:,,,/Resources/icon.ico" 
+                        ToolTipText="资源监控"
+                        ContextMenu="{StaticResource  SysTrayMenu}">
+            
+        </tb:TaskbarIcon>
+    </Application.Resources>
+</Application>
